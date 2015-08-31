@@ -113,14 +113,13 @@ AdminLteAsset::register($this);
                     <?= $content ?>
                 </div>
             </div>
-        </div>
-        <footer class="main-footer">            
-            <div class="container">
-                <p class="pull-left">&copy; SangkilSoft <?= date('Y') ?></p>
-                <p class="pull-right"><?= Yii::powered() ?></p>
+            <div class="main-footer" style="padding-top: 7px; padding-bottom: 3px;">           
+                <div class="container">
+                    <p class="pull-left">&copy; SangkilSoft <?= date('Y') ?></p>
+                    <p class="pull-right"><?= Yii::powered() ?></p>
+                </div>
             </div>
-        </footer>
-
+        </div>
         <?php $this->endBody() ?>
     </body>
 </html>

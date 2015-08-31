@@ -1,12 +1,14 @@
 <?php
+
 use yii\helpers\Url;
 use dee\angular\NgView;
 
 /* @var $this yii\web\View */
 ?>
 <?=
+
 NgView::widget([
-    'requires' => ['ngResource','ui.bootstrap','dee.angular'],
+    'requires' => ['ngResource', 'ui.bootstrap', 'dee.angular'],
     'routes' => [
         '/' => [
             'view' => 'index',
@@ -31,12 +33,16 @@ NgView::widget([
     ],
     'resources' => [
         'Coa' => [
-            'url' => '/biz3-fico/web/index.php/coa-rest',
-            'actions' =>[
+            'url' => '/biz3-fico/web/index.php/coa-rests/:id',
+            'actions' => [
                 'update' => [
-                    'method' => 'PUT',
+                    'method' => 'PUT'
                 ],
+                'view' => [
+                    'method' => 'GET',
+                ]
             ]
         ]
     ]
-]);?>
+]);
+?>

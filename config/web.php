@@ -41,6 +41,7 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        /*
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
 //            'showScriptName' => false,
@@ -52,10 +53,9 @@ $config = [
                     'controller' => ['coa-rest'],
                 ],
             ],
-//            'rules' => [
-//                'page/<view:\w+>' => 'site/page',
-//            ],
         ],
+         * 
+         */
     ],
     'modules' => [
         'admin' => [
@@ -84,10 +84,10 @@ $config = [
 
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = [
-        'class' => 'yii\debug\Module',
-    ];
+//    $config['bootstrap'][] = 'debug';
+//    $config['modules']['debug'] = [
+//        'class' => 'yii\debug\Module',
+//    ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
