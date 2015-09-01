@@ -5,10 +5,9 @@
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
-use app\assets\AdminLteAsset;
 
 AppAsset::register($this);
-AdminLteAsset::register($this);
+//AdminLteAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -20,8 +19,19 @@ AdminLteAsset::register($this);
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
+    <body class="hold-transition skin-blue sidebar-mini">
         <?php $this->beginBody() ?>
+        <?php
+        echo uran1980\yii\widgets\pace\Pace::widget([
+            'color' => 'red',
+            'theme' => 'flash',
+            'paceOptions' => [
+                'ajax' => false,
+                'document' => false,
+                'startOnPageLoad' => false
+            ],
+        ]);
+        ?>
         <div class="wrapper">    
             <header class="main-header">
                 <!-- Logo -->
@@ -96,7 +106,7 @@ AdminLteAsset::register($this);
                             </li>
                             <!-- User Account: style can be found in dropdown.less -->
                             <li>
-                                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                                <a href="#" data-toggle="control-sidebar">&nbsp;</a>
                             </li>
                         </ul>
                     </div>
@@ -124,3 +134,4 @@ AdminLteAsset::register($this);
     </body>
 </html>
 <?php $this->endPage() ?>
+

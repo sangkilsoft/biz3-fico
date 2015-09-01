@@ -18,7 +18,7 @@ class AdminLteAsset extends AssetBundle
         'fontawesome/css/font-awesome.css.map',
         'fontawesome/css/font-awesome.min.css',
     ];
-    public $js = [        
+    public $js = [              
         'bootstrap/dist/js/bootstrap.min.js',
         'bootstrap/js/tooltip.js',        
         'admin-lte/plugins/slimScroll/jquery.slimscroll.min.js',

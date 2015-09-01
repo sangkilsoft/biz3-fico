@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers;
+namespace app\controllers\fico;
 
 use Yii;
 use yii\web\Controller;

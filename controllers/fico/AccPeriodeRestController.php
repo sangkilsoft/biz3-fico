@@ -1,17 +1,17 @@
 <?php
 
-namespace app\controllers;
+namespace app\controllers\fico;
 
 use Yii;
 use yii\rest\ActiveController;
 use yii\data\ActiveDataProvider;
 
 /**
- * CoaRestController implements the Rest controller for Coa model.
+ * AccPeriodeRestController implements the Rest controller for AccPeriode model.
  */
-class CoaRestController extends ActiveController {
+class AccPeriodeRestController extends ActiveController {
 
-    public $modelClass = 'app\models\Coa';
+    public $modelClass = 'app\models\fico\AccPeriode';
 
     public function actions() {
         $actions = parent::actions();
@@ -21,7 +21,7 @@ class CoaRestController extends ActiveController {
 
     public function actionIndex() {
         $activeData = new ActiveDataProvider([
-            'query' => \app\models\Coa::find()->with('coas'),
+            'query' => \app\models\fico\AccPeriode::find(),
             'pagination' => false
         ]);
         return $activeData;

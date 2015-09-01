@@ -41,7 +41,6 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
 //            'showScriptName' => false,
@@ -50,12 +49,10 @@ $config = [
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule',
-                    'controller' => ['coa-rest'],
+                    'controller' => ['coa-rest','fico/acc-periode-rest','fico/coa-rest'],
                 ],
             ],
         ],
-         * 
-         */
     ],
     'modules' => [
         'admin' => [

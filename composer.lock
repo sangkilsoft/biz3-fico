@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5ffb00dc57ee995f58a7d9cb3b02bb88",
+    "hash": "d595820448c6f969e8d50a20cb64bae7",
     "packages": [
         {
             "name": "bower-asset/admin-lte",
@@ -55,16 +55,16 @@
         },
         {
             "name": "bower-asset/angular",
-            "version": "v1.4.4",
+            "version": "v1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/angular/bower-angular.git",
-                "reference": "f00cff5525db7c853f42854079a31936d400f99b"
+                "reference": "3809d44e5279e94a0596d5bc216d921f34f8ab2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/angular/bower-angular/zipball/f00cff5525db7c853f42854079a31936d400f99b",
-                "reference": "f00cff5525db7c853f42854079a31936d400f99b",
+                "url": "https://api.github.com/repos/angular/bower-angular/zipball/3809d44e5279e94a0596d5bc216d921f34f8ab2a",
+                "reference": "3809d44e5279e94a0596d5bc216d921f34f8ab2a",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -109,20 +109,20 @@
         },
         {
             "name": "bower-asset/angular-resource",
-            "version": "v1.4.4",
+            "version": "v1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/angular/bower-angular-resource.git",
-                "reference": "1e95a21dfa69fe7b03c5d91dfe7aeb7cf4b82faf"
+                "reference": "1b00ddb9576b35da312fc044f114e4ec31bc7377"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/angular/bower-angular-resource/zipball/1e95a21dfa69fe7b03c5d91dfe7aeb7cf4b82faf",
-                "reference": "1e95a21dfa69fe7b03c5d91dfe7aeb7cf4b82faf",
+                "url": "https://api.github.com/repos/angular/bower-angular-resource/zipball/1b00ddb9576b35da312fc044f114e4ec31bc7377",
+                "reference": "1b00ddb9576b35da312fc044f114e4ec31bc7377",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/angular": "1.4.4"
+                "bower-asset/angular": "1.4.5"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -132,20 +132,20 @@
         },
         {
             "name": "bower-asset/angular-route",
-            "version": "v1.4.4",
+            "version": "v1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/angular/bower-angular-route.git",
-                "reference": "253b707a425ede44798caca0031293f33b291808"
+                "reference": "73164ac5aa58a3b433463977825d738bdccc1202"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/angular/bower-angular-route/zipball/253b707a425ede44798caca0031293f33b291808",
-                "reference": "253b707a425ede44798caca0031293f33b291808",
+                "url": "https://api.github.com/repos/angular/bower-angular-route/zipball/73164ac5aa58a3b433463977825d738bdccc1202",
+                "reference": "73164ac5aa58a3b433463977825d738bdccc1202",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/angular": "1.4.4"
+                "bower-asset/angular": "1.4.5"
             },
             "type": "bower-asset-library",
             "extra": {
@@ -334,6 +334,56 @@
                 "mask",
                 "plugins"
             ]
+        },
+        {
+            "name": "bower-asset/pace",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HubSpot/pace.git",
+                "reference": "b202561ac0d5721a5df8d48dbf94f237c3d44405"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HubSpot/pace/zipball/b202561ac0d5721a5df8d48dbf94f237c3d44405",
+                "reference": "b202561ac0d5721a5df8d48dbf94f237c3d44405",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "pace.js",
+                "bower-asset-ignore": [
+                    ".*",
+                    "Gruntfile.coffee",
+                    "bower_components",
+                    "docs",
+                    "node_modules",
+                    "package.json",
+                    "templates",
+                    "tests"
+                ],
+                "branch-alias": {
+                    "dev-master": "1.0.2-dev"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Automatic page load progress bar",
+            "keywords": [
+                "activity",
+                "ajax",
+                "automatic",
+                "bar",
+                "client-side",
+                "load",
+                "loading",
+                "pageload",
+                "progress",
+                "progress",
+                "spinner"
+            ],
+            "time": "2015-07-03 13:15:23"
         },
         {
             "name": "bower-asset/punycode",
@@ -861,12 +911,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "caf94ee2473ba6503e411ce3bcbd33b080f1d903"
+                "reference": "a16e5a75aa8c3b97f224f42dbbad5b379ce14659"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/caf94ee2473ba6503e411ce3bcbd33b080f1d903",
-                "reference": "caf94ee2473ba6503e411ce3bcbd33b080f1d903",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/a16e5a75aa8c3b97f224f42dbbad5b379ce14659",
+                "reference": "a16e5a75aa8c3b97f224f42dbbad5b379ce14659",
                 "shasum": ""
             },
             "require": {
@@ -906,7 +956,53 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2015-07-15 23:24:06"
+            "time": "2015-08-30 17:08:54"
+        },
+        {
+            "name": "uran1980/yii2-pace-widget",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/uran1980/yii2-pace-widget.git",
+                "reference": "ecb8596fed3d70646015a26773f6c9cade0d7b81"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/uran1980/yii2-pace-widget/zipball/ecb8596fed3d70646015a26773f6c9cade0d7b81",
+                "reference": "ecb8596fed3d70646015a26773f6c9cade0d7b81",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/pace": "*",
+                "yiisoft/yii2": "~2"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "uran1980\\yii\\widgets\\pace\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Yakovlev",
+                    "email": "uran1980@gmail.com",
+                    "homepage": "https://github.com/uran1980",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An Yii2 widget for automatic web page progress bar.",
+            "homepage": "https://github.com/uran1980/yii2-pace-widget",
+            "keywords": [
+                "PACE",
+                "widgets",
+                "yii2",
+                "yii2-pace-widget"
+            ],
+            "time": "2015-03-12 23:32:34"
         },
         {
             "name": "yiisoft/yii2",
@@ -914,12 +1010,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "47c7b9bb4066ebedc6114410dcd6ceff6e273e9c"
+                "reference": "140505acd532961ba94c67ccde583454103a943d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/47c7b9bb4066ebedc6114410dcd6ceff6e273e9c",
-                "reference": "47c7b9bb4066ebedc6114410dcd6ceff6e273e9c",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/140505acd532961ba94c67ccde583454103a943d",
+                "reference": "140505acd532961ba94c67ccde583454103a943d",
                 "shasum": ""
             },
             "require": {
@@ -994,7 +1090,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-08-27 14:57:10"
+            "time": "2015-08-28 13:36:29"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -1099,12 +1195,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "0a3940119a7552418bbd7c842de12953390e4ab2"
+                "reference": "6519954dc8dd16050d886d1266d6248cbae2d14f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/0a3940119a7552418bbd7c842de12953390e4ab2",
-                "reference": "0a3940119a7552418bbd7c842de12953390e4ab2",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/6519954dc8dd16050d886d1266d6248cbae2d14f",
+                "reference": "6519954dc8dd16050d886d1266d6248cbae2d14f",
                 "shasum": ""
             },
             "require": {
@@ -1144,7 +1240,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2015-08-25 17:16:25"
+            "time": "2015-08-31 23:04:33"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -1390,7 +1486,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "uran1980/yii2-pace-widget": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

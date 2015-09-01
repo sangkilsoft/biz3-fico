@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 ?>
 
-<div class="coa-index">
+<div class="acc-periode-index">
     <h1><?= Html::encode($this->title) ?></h1>
     <p>
         <?= Html::a('Create', '#/create', ['class' => 'btn btn-success']) ?>
@@ -17,12 +17,11 @@ use yii\helpers\Html;
             <thead>
                 <tr d-sort ng-model="provider.sort" ng-change="provider.sorting()" multisort="false">
                     <th>#</th>
-<!--                    <th><a href sort-field="id">Id</a></th>-->
-<!--                    <th><a href sort-field="parent_id">Parent_id</a></th>-->
-                    <th><a href sort-field="code">Code</a></th>
+                    <th><a href sort-field="id">Id</a></th>
                     <th><a href sort-field="name">Name</a></th>
-                    <th><a href sort-field="type">Type</a></th>
-                    <th><a href sort-field="normal_balance">Normal_balance</a></th>
+                    <th><a href sort-field="date_from">Date_from</a></th>
+                    <th><a href sort-field="date_to">Date_to</a></th>
+                    <th><a href sort-field="status">Status</a></th>
 <!--
                     <th><a href sort-field="created_at">Created_at</a></th>
                     <th><a href sort-field="created_by">Created_by</a></th>
@@ -35,12 +34,11 @@ use yii\helpers\Html;
             <tbody>
                 <tr ng-repeat="(no,model) in rows">
                     <td>{{(provider.page-1)*provider.itemPerPage + no + 1}}</td>
-<!--                    <td>{{model.id}}</td>
-                    <td>{{model.parent_id}}</td>-->
-                    <td>{{model.code}}</td>
+                    <td>{{model.id}}</td>
                     <td>{{model.name}}</td>
-                    <td>{{model.type}}</td>
-                    <td>{{model.normal_balance}}</td>
+                    <td>{{model.date_from}}</td>
+                    <td>{{model.date_to}}</td>
+                    <td>{{model.status}}</td>
 <!--
                     <td>{{model.created_at}}</td>
                     <td>{{model.created_by}}</td>
@@ -55,9 +53,9 @@ use yii\helpers\Html;
                 </tr>
             </tbody>
         </table>
-<!--        <pagination total-items="provider.totalItems" ng-model="provider.page"
+        <pagination total-items="provider.totalItems" ng-model="provider.page"
                     max-size="5" items-per-page="provider.itemPerPage"
                     ng-change="provider.paging()"
-                    class="pagination-sm" boundary-links="true"></pagination>-->
+                    class="pagination-sm" boundary-links="true"></pagination>
     </div>
 </div>

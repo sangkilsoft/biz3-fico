@@ -54,8 +54,8 @@ use yii\helpers\Url;
                         <li>
                             <a href="#"><i class="fa fa-check"></i> Acc Masters<i class="fa fa-angle-left pull-right"></i></a>
                             <ul class="treeview-menu">
-                                <li><a href="<?= Url::to(['/coa/index']); ?>"><i class="fa fa-check"></i> COA</a></li>
-                                <li><a href="<?= Url::to(['/account/index']); ?>"><i class="fa fa-check"></i> Periodes</a></li>
+                                <li><a href="<?= Url::to(['/fico/coa']); ?>"><i class="fa fa-check"></i> COA</a></li>
+                                <li><a href="<?= Url::to(['/fico/acc-periode']); ?>"><i class="fa fa-check"></i> Periodes</a></li>
                             </ul>
                         </li>
                         <li>

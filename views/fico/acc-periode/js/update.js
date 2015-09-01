@@ -4,13 +4,13 @@ $routeParams = $injector.get('$routeParams');
 
 $scope.paramId = $routeParams.id;
 // model
-Coa.get({id:$scope.paramId},function(row){
+AccPeriode.get({id:$scope.paramId},function(row){
     $scope.model = row;
 });
 
 // save Item
 $scope.save = function(){
-    Coa.update({id:$scope.paramId},$scope.model,function(model){
+    AccPeriode.update({id:$scope.paramId},$scope.model,function(model){
         id = model.id;
         $location.path('/' + id);
     },function(r){
