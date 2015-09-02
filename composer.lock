@@ -1300,12 +1300,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "c27c8263797619a97987bd2411f1084b9d03e90a"
+                "reference": "deff435558e374e97319b1f083de90d93dd5af2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/c27c8263797619a97987bd2411f1084b9d03e90a",
-                "reference": "c27c8263797619a97987bd2411f1084b9d03e90a",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/deff435558e374e97319b1f083de90d93dd5af2e",
+                "reference": "deff435558e374e97319b1f083de90d93dd5af2e",
                 "shasum": ""
             },
             "require": {
@@ -1342,7 +1342,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-08-26 15:00:40"
+            "time": "2015-09-01 10:01:44"
         },
         {
             "name": "yiisoft/yii2-codeception",
