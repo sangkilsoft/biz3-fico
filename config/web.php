@@ -49,7 +49,10 @@ $config = [
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule',
-                    'controller' => ['coa-rest','fico/acc-periode-rest','fico/coa-rest'],
+                    'controller' => ['fico/acc-periode-rest',
+                        'fico/coa-rest',
+                        'inventory/warehouse-rest',
+                        'master/branch-rest'],
                 ],
             ],
         ],

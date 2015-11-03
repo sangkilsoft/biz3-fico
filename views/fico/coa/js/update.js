@@ -4,21 +4,22 @@ $routeParams = $injector.get('$routeParams');
 
 $scope.paramId = $routeParams.id;
 // model
-Coa.get({id:$scope.paramId},function(row){
+coa.get({id:$scope.paramId},function(row){
     $scope.model = row;
 });
 
 // save Item
 $scope.save = function(){
-    Coa.update({id:$scope.paramId},$scope.model,function(model){
-//        id = model.id;
-//        $location.path('/' + id);
-        $location.path('/');
+    coa.update({id:$scope.paramId},$scope.model,function(model){
+        id = model.id;
+        $location.path('/' + id);
     },function(r){
-        $scope.errors = {status: r.status, text: r.statusText, data: {}};
+        $scope.errors = {};
+        $scope.errorStatus = r.status;
+        $scope.errorText = r.statusTest;
         if (r.status == 422) {
             angular.forEach(r.data,function(err) {
-                $scope.errors.data[err.field] = err.message;
+                $scope.errors[err.field] = err.message;
             });
         }
     });

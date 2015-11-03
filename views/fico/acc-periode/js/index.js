@@ -1,5 +1,6 @@
 var $location = $injector.get('$location');
 var search = $location.search();
+var $pageInfo = $injector.get('$pageInfo');
 
 // data provider
 $scope.provider = {
@@ -16,11 +17,11 @@ $scope.provider = {
 
 // initial load
 query = function(){
-    AccPeriode.query({
+    accPeriode.query({
         page: search.page,
         sort: search.sort,
     }, function (rows, headerCallback) {
-        yii.angular.getPageInfo($scope.provider, headerCallback);
+        $pageInfo(headerCallback, $scope.provider);
         $scope.rows = rows;
     });
 }
@@ -30,7 +31,7 @@ query();
 $scope.deleteModel = function(model){
     if(confirm('Are you sure you want to delete')){
         id = model.id;
-        AccPeriode.remove({id:id},{},function(){
+        accPeriode.remove({id:id},{},function(){
             query();
         });
     }

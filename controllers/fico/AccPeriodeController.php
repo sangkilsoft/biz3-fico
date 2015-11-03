@@ -6,7 +6,7 @@ use Yii;
 use yii\web\Controller;
 
 /**
- * AccPeriodeController implements the CRUD actions for AccPeriode model.
+ * AccPeriodeController implements the CRUD actions for accPeriode model.
  */
 class AccPeriodeController extends Controller
 {

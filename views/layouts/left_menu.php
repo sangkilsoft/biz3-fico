@@ -18,7 +18,7 @@ use yii\helpers\Url;
                 </span>
             </div>
         </form>
-        <?php if (!Yii::$app->user->isGuest) { ?>
+        <?php //if (!Yii::$app->user->isGuest) { ?>
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
@@ -59,7 +59,7 @@ use yii\helpers\Url;
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-check"></i> Journals</a>
+                            <a href="<?= Url::to(['/fico/gl/index']); ?>"><i class="fa fa-check"></i> Journals</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-check"></i> Invoices<i class="fa fa-angle-left pull-right"></i></a>
@@ -105,7 +105,7 @@ use yii\helpers\Url;
                     </ul>
                 </li>
             </ul>
-        <?php } ?>
+        <?php // } ?>
     </section>
     <!-- /.sidebar -->
 </aside>

@@ -19,7 +19,7 @@ AppAsset::register($this);
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
         <?php $this->beginBody() ?>
         <?php
         echo uran1980\yii\widgets\pace\Pace::widget([
@@ -105,23 +105,55 @@ AppAsset::register($this);
                                 </ul>
                             </li>
                             <!-- User Account: style can be found in dropdown.less -->
-                            <li>
-                                <a href="#" data-toggle="control-sidebar">&nbsp;</a>
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <!--<img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">-->
+                                    <?php echo Html::img('@web/../vendor/bower/admin-lte/dist/img/user2-160x160.jpg', ['class' => 'user-image', 'alt'=>'User Image']) ?>
+                                    <span class="hidden-xs">
+                                        <?= (Yii::$app->user->isGuest) ? 'Guest' : Yii::$app->user->identity->username ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- User image -->
+                                    <li class="user-header">
+                                        <!--<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">-->
+                                        <?php echo Html::img('@web/../vendor/bower/admin-lte/dist/img/user2-160x160.jpg', ['class' => 'img-circle', 'alt'=>'User Image']) ?>
+                                        <p>
+                                            <?=(Yii::$app->user->isGuest) ? 'Guest' : Yii::$app->user->identity->username ?>
+                                            <small>Member since Nov. <?= date('Y') ?></small>
+                                        </p>
+                                    </li>                                    
+                                    <!-- Menu Footer-->
+                                    <li class="user-footer">
+                                        <div class="pull-left">
+                                            <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        </div>
+                                        <div class="pull-right">
+                                            <?= (Yii::$app->user->isGuest) ? yii\bootstrap\Html::a('Login', yii\helpers\Url::to(['/site/login']), ['class' => 'btn btn-default btn-flat']) : yii\bootstrap\Html::a('Logout', yii\helpers\Url::to(['/site/logout']), ['class' => 'btn btn-default btn-flat']); ?>
+                                        </div>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
                 </nav>
             </header>        
-            <?php require 'left_menu.php'; ?> 
-            <div class="content-wrapper">          
-                <div class="container">
+            <?php require 'left_menu.php'; ?>
+            <div class="content-wrapper">  
+                <section class="content-header">
+                    <h1>
+                        <?= $this->title ?>
+                        <small>Title description</small>
+                    </h1>
                     <?=
                     Breadcrumbs::widget([
                         'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                     ])
                     ?>
+                </section>
+                <section class="content">
                     <?= $content ?>
-                </div>
+                </section>
             </div>
             <div class="main-footer" style="padding-top: 7px; padding-bottom: 3px;">           
                 <div class="container">

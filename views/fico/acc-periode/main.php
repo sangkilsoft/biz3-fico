@@ -6,40 +6,40 @@ use dee\angular\NgView;
 ?>
 <?=
 NgView::widget([
-    'requires' => ['ngResource','ui.bootstrap','dee.angular'],
+    'requires' => ['ngResource','ui.bootstrap','dee.ui'],
     'routes' => [
         '/' => [
             'view' => 'index',
             'js' => 'js/index.js',
-            'injection' => ['AccPeriode',],
+            'injection' => ['accPeriode',],
         ],
         '/create' => [
             'view' => 'create',
             'js' => 'js/create.js',
-            'injection' => ['AccPeriode',],
+            'injection' => ['accPeriode',],
         ],
         '/:id/edit' => [
             'view' => 'update',
             'js' => 'js/update.js',
-            'injection' => ['AccPeriode',],
+            'injection' => ['accPeriode',],
         ],
         '/:id' => [
             'view' => 'view',
             'js' => 'js/view.js',
-            'injection' => ['AccPeriode',],
+            'injection' => ['accPeriode',],
         ],
     ],
     'resources' => [
-        'AccPeriode' => [
-            'url' => '/biz3-fico/web/index.php/fico/acc-periode-rests/:id',
-            'actions' =>[
+        'accPeriode' => [
+        'url' => '/biz3-fico/web/index.php/fico/acc-periode-rests/:id',
+            'actions' => [
                 'update' => [
                     'method' => 'PUT'
                 ],
                 'view' => [
-                    'method' => 'GET',
+                    'method' => 'GET'
                 ]
             ]
         ]
-    ]
+    ], 
 ]);?>

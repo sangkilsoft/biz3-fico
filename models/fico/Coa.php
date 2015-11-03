@@ -34,6 +34,10 @@ class Coa extends \yii\db\ActiveRecord {
         return 'coa';
     }
 
+    public function extraFields() {
+        return ['parent','coas'];
+    }
+
     /**
      * @inheritdoc
      */
