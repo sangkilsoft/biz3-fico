@@ -5,6 +5,9 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $widget NgView */
+/*
+ * some update
+ */
 ?>
 
 <div class="coa-index">
