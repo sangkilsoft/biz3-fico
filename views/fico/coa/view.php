@@ -20,7 +20,6 @@ use yii\helpers\Html;
         <tr><th>Parent ID</th><td>{{model.parent_id}}</td></tr>
         <tr><th>Code</th><td>{{model.code}}</td></tr>
         <tr><th>Name</th><td>{{model.name}}</td></tr>
-        <tr><th>Type</th><td>{{model.type}}</td></tr>
         <tr><th>Normal Balance</th><td>{{model.normal_balance}}</td></tr>
         <tr><th>Created At</th><td>{{model.created_at}}</td></tr>
         <tr><th>Created By</th><td>{{model.created_by}}</td></tr>

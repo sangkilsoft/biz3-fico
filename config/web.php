@@ -45,7 +45,7 @@ $config = [
             'class' => 'yii\web\UrlManager',
 //            'showScriptName' => false,
             'enablePrettyUrl' => true,
-//            'enableStrictParsing' => true,
+            'enableStrictParsing' => false,
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule',

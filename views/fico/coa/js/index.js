@@ -55,11 +55,14 @@ $scope.deleteModel = function(model) {
     }
 };
 
+if ($("body").hasClass('sidebar-collapse')) {
+    $("body").removeClass('sidebar-collapse').trigger('expanded.pushMenu');
+}
+
 function find_in_object(my_object, my_criteria) {
     return my_object.filter(function(obj) {
         return Object.keys(my_criteria).every(function(c) {
             return obj[c] === my_criteria[c];
         });
     });
-}
-;
+};

@@ -19,7 +19,7 @@ AppAsset::register($this);
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
+    <body class="hold-transition skin-blue sidebar-mini">
         <?php $this->beginBody() ?>
         <?php
         echo uran1980\yii\widgets\pace\Pace::widget([

@@ -14,7 +14,6 @@ use yii\db\Expression;
  * @property integer $parent_id
  * @property string $code
  * @property string $name
- * @property integer $type
  * @property string $normal_balance
  * @property string $created_at
  * @property integer $created_by
@@ -43,12 +42,13 @@ class Coa extends \yii\db\ActiveRecord {
      */
     public function rules() {
         return [
-            [['parent_id', 'type', 'created_by', 'updated_by'], 'integer'],
-            [['code', 'name', 'type', 'normal_balance', 'created_at', 'updated_at'], 'required'],
+            [['parent_id', 'created_by', 'updated_by'], 'integer'],
+            [['code', 'name', 'normal_balance'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
             [['code'], 'string', 'max' => 16],
             [['name'], 'string', 'max' => 64],
             [['normal_balance'], 'string', 'max' => 1],
+            [['code'], 'unique'],
             [['parent_id'], 'exist', 'skipOnError' => true, 'targetClass' => Coa::className(), 'targetAttribute' => ['parent_id' => 'id']],
         ];
     }
@@ -62,7 +62,6 @@ class Coa extends \yii\db\ActiveRecord {
             'parent_id' => 'Parent ID',
             'code' => 'Code',
             'name' => 'Name',
-            'type' => 'Type',
             'normal_balance' => 'Normal Balance',
             'created_at' => 'Created At',
             'created_by' => 'Created By',
@@ -96,7 +95,7 @@ class Coa extends \yii\db\ActiveRecord {
         return [
             [
                 'class' => TimestampBehavior::className(),
-                'createdAtAttribute' => 'create_at',
+                'createdAtAttribute' => 'created_at',
                 'updatedAtAttribute' => 'updated_at',
                 'value' => new Expression('NOW()')
             ],

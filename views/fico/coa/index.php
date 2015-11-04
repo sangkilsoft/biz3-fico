@@ -17,7 +17,7 @@ use yii\helpers\Html;
         </div>
         <div class="box-body">
             <div class="grid-view">
-                <table class="table table-hover">
+                <table class="table table-hover no-padding">
                     <thead>
                         <tr d-sort ng-model="provider.sort" ng-change="provider.sorting()" multisort="false">
                             <th>#</th>
@@ -26,12 +26,12 @@ use yii\helpers\Html;
                             <th><a href sort-field="code">Code</a></th>
                             <th><a href sort-field="name">Name</a></th>
                             <!--<th><a href sort-field="type">Type</a></th>-->
-                            <!--
-                                                <th><a href sort-field="normal_balance">Normal_balance</a></th>
-                                                <th><a href sort-field="created_at">Created_at</a></th>
-                                                <th><a href sort-field="created_by">Created_by</a></th>
-                                                <th><a href sort-field="updated_at">Updated_at</a></th>
-                                                <th><a href sort-field="updated_by">Updated_by</a></th>
+                            <th><a href sort-field="normal_balance">Normal_balance</a></th>
+
+<!--                    <th><a href sort-field="created_at">Created_at</a></th>
+                    <th><a href sort-field="created_by">Created_by</a></th>
+                    <th><a href sort-field="updated_at">Updated_at</a></th>
+                    <th><a href sort-field="updated_by">Updated_by</a></th>
                             -->
                             <th></th>
                         </tr>
@@ -48,13 +48,12 @@ use yii\helpers\Html;
                             <td ng-if='model.indention !== ""'>
                                 {{model.indention}}{{model.name}}
                             </td>
-                            <!--<td>{{model.type}}</td>-->
-                            <!--
-                                                <td>{{model.normal_balance}}</td>
-                                                <td>{{model.created_at}}</td>
-                                                <td>{{model.created_by}}</td>
-                                                <td>{{model.updated_at}}</td>
-                                                <td>{{model.updated_by}}</td>
+                            <!--<td>{{model.type}}</td>-->                            
+                            <td>{{model.normal_balance}}</td>
+        <!--                    <td>{{model.created_at}}</td>
+                            <td>{{model.created_by}}</td>
+                            <td>{{model.updated_at}}</td>
+                            <td>{{model.updated_by}}</td>
                             -->
                             <td>
                                 <a ng-href="#/{{model.id}}"><span class="glyphicon glyphicon-eye-open"></span></a>
@@ -65,12 +64,12 @@ use yii\helpers\Html;
                     </tbody>
                 </table>
             </div>
-            <div class="box-footer">
+<!--            <div class="box-footer">
                 <pagination total-items="provider.totalItems" ng-model="provider.page"
                             max-size="5" items-per-page="provider.itemPerPage"
                             ng-change="provider.paging()"
                             class="pagination-sm" boundary-links="true"></pagination> 
-            </div>        
+            </div>        -->
         </div>
     </div>
-    </div>
+</div>
