@@ -53,7 +53,7 @@ $widget->renderJs('js/form.js');
         </div>
         <div class="form-group">
             <button class="btn btn-primary" ng-click="save()">Save</button>
-            <button class="btn btn-danger" ng-click="discard()">Save</button>
+            <button class="btn btn-danger" ng-click="discard()">Discard</button>
         </div>
     </form>
 </div>

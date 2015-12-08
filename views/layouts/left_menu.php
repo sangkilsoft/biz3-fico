@@ -4,7 +4,6 @@
  * Create at {date('now')}
  */
 
-use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
 <aside class="main-sidebar">

@@ -1,11 +1,16 @@
 
 $location = $injector.get('$location');
+$routeParams = $injector.get('$routeParams');
+
+$scope.paramId = $routeParams.id;
 // model
-$scope.model = {};
+Sales.get({id:$scope.paramId},function(row){
+    $scope.model = row;
+});
 
 // save Item
 $scope.save = function(){
-    coa.save({},$scope.model,function(model){
+    Sales.update({id:$scope.paramId},$scope.model,function(model){
         id = model.id;
         $location.path('/' + id);
     },function(r){

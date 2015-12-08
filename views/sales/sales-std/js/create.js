@@ -3,9 +3,10 @@ $location = $injector.get('$location');
 // model
 $scope.model = {};
 
+
 // save Item
 $scope.save = function(){
-    coa.save({},$scope.model,function(model){
+    Sales.save({},$scope.model,function(model){
         id = model.id;
         $location.path('/' + id);
     },function(r){
